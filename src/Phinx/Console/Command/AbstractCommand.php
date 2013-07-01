@@ -168,7 +168,8 @@ abstract class AbstractCommand extends Command
         // locate the phinx config file (default: phinx.yml)
         // TODO - In future walk the tree in reverse (max 10 levels)
         $locator = new FileLocator(array(
-            $cwd . DIRECTORY_SEPARATOR
+            $cwd . DIRECTORY_SEPARATOR,
+	    $cwd . DIRECTORY_SEPARATOR . "config" . DIRECTORY_SEPARATOR
         ));
 
         // Locate() throws an exception if the file does not exist
