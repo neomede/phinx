@@ -42,7 +42,7 @@ class Util
     {
         $arr = preg_split('/(?=[A-Z])/', $className);
         unset($arr[0]); // remove the first element ('')
-        $fileName = date('YmdHis') . '_' . strtolower(implode($arr, '_')) . '.php';
+        $fileName = strtolower(implode($arr, '_')) . '_' . date('YmdHis') . '.php';
         return $fileName;
     }
 
