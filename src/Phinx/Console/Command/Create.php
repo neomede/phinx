@@ -98,7 +98,7 @@ class Create extends AbstractCommand
         $contents = file_get_contents(dirname(__FILE__) . '/../../Migration/Migration.template.php.dist');
         
         // inject the class name
-        $contents = str_replace('$className', $className, $contents);
+        $contents = str_replace('$className', $fileName, $contents);
         
         if (false === file_put_contents($filePath, $contents)) {
             throw new \RuntimeException(sprintf(
